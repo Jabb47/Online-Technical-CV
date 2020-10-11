@@ -5,6 +5,7 @@ class PersonalDetail(models.Model):
     photo           = models.ImageField(upload_to='photos' , blank=True)
     professions     = models.CharField(blank=True , max_length=255)
     description     = models.TextField(max_length=255 , blank=True)
+    address          = models.TextField(max_length=255 , blank=True)
     date_of_birth   = models.DateField()
     first_names     = models.CharField(max_length=100 , blank=True)
     last_name       = models.CharField(max_length=100,  blank=True)
@@ -14,6 +15,8 @@ class PersonalDetail(models.Model):
     phone_number    = models.CharField(max_length=10)
     facebook        = models.URLField(blank=True)
     instagram       = models.URLField(blank=True)
+    gitHub          = models.URLField(blank=True)
+    cv_file         = models.FileField(blank=True)
 
 
     def __str__(self):
@@ -29,9 +32,21 @@ class Skill(models.Model):
     
 
 class Project(models.Model):
+    DEVELOPMENT = 'D'
+    PRODUCTION = 'P'
+    MODE_CHOICES = [
+        (DEVELOPMENT, 'Development'),
+        (PRODUCTION, 'Production')
+    ]
     name = models.CharField(max_length=100,  blank=True)
+    picture = models.ImageField(upload_to='photos' , blank=True)
     description = models.TextField(max_length=255 , blank=True)
     link = models.URLField(blank=True)
+    mode = models.CharField(
+							max_length=1,
+							choices=MODE_CHOICES,
+							default=DEVELOPMENT,
+						)
     def __str__(self):
         return self.name
 
@@ -58,7 +73,7 @@ class WorkExperience(models.Model):
         return self.companyName
 
 class Education(models.Model):
-    istitutionName = models.CharField(max_length=100,  blank=True)
+    institutionName = models.CharField(max_length=100,  blank=True)
     qualification = models.CharField(max_length=100,  blank=True)
     start_date = models.DateField()
     end_date = models.DateField()
