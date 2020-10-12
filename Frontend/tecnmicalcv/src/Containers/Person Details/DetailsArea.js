@@ -19,12 +19,7 @@ class DetailsArea extends Component {
             })
         })
     }
-    formatDateOfBirth = () => {
-        let date =  new Date(this.state.details.date_of_birth);
-        console.log(date);
-        return date;
-       
-    }
+
     render() {
         return (
             <section class="personal_details_container"  id="Personal-section">
@@ -34,10 +29,10 @@ class DetailsArea extends Component {
                     name = {this.state.details.first_names}
                     lastName = {this.state.details.last_name}
                     professions = {this.state.details.professions}
-                    dateOfBirth = {this.formatDateOfBirth}
+                    dateOfBirth = {this.state.detailsdateOfBirth}
                     cellNo = {this.state.details.phone_number}
                     email = {this.state.details.email}
-                   address = "1614 Morkolo Street Boikhutso Location"
+                    address = {this.state.details.address}
                     linkedIn = {this.state.details.linkedIn}
                     fb = {this.state.details.facebook}
                     gitHub = {this.state.details.gitHub}

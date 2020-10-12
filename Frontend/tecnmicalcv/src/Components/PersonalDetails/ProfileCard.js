@@ -9,6 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Photo from '../../assets/me.jpg'
 
 function ProfileCard(props) {
     return (
@@ -16,7 +17,7 @@ function ProfileCard(props) {
                         <div className="banner_content">
                             <div className="media">
                                 <div className="col-lg-5 col-sm-12 d-flex">
-                                    <img src="https://assets.entrepreneur.com/content/1x1/300/20190311082210-Vusi-Thembekwayo.jpeg" alt="Picture of Me!"/>
+                                    <img src={{Photo}} alt="Picture of Me!"/>
                                 </div>
                                 <div className="media-body">
                                     <div className="col-lg-7 col-sm-12 personal_text">

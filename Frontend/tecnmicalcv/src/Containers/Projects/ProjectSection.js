@@ -18,7 +18,7 @@ export class ProjectSection extends Component {
     }
     render() {
         return (
-            <div class="site-section block-13" id="testimonials-section" data-aos="fade">
+            <div class="site-section block-13" id="projects" data-aos="fade">
                 <div class="container">
                     <div class="text-center mb-5">
                         <div class="block-heading-1">

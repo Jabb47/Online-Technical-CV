@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('cv.urls')),
+    path('api/', include('cv.urls')),
+    path('api/contacts/', include('contacts.urls')),
 ] + static(settings.MEDIA_URL, doucument_root=settings.MEDIA_ROOT)
 

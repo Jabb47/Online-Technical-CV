@@ -18,9 +18,9 @@ class Navbar extends Component {
 			<header className="site-navbar js-sticky-header site-navbar-target" role="banner">
 				<div className="container">
 					<div className="row align-items-center position-relative">
-						<div className="site-logo">
-						<a href="#" className="text-black">KJ MOTLHALE</a>
-						</div>
+					<div class="site-logo">
+						<a href="#">KJ MOTLHALE</a>
+					</div>
 						<div className="col-12">
 							<nav className="site-navigation text-right ml-auto " role="navigation">
 			

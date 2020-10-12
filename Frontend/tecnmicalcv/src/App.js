@@ -5,6 +5,7 @@ import SkillsSection from './Containers/Skills Section/SkillsSection';
 import ExperienceEducation from './Containers/Education and Experince Section/ExperienceEducation';
 import ProjectSection from './Containers/Projects/ProjectSection'
 import TestimonialSection from './Containers/Testimonial/TestimonialsSection'
+import ContactSession from './Containers/Contacts/ContactSection'
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <ExperienceEducation/>
       <ProjectSection/>
       <TestimonialSection/>
+      <ContactSession/>
 
     </div>
   );
